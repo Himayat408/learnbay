@@ -1,0 +1,2 @@
+                                                                     echo 36051b3a427f27e9150eb25ebb8776184d406205d579e5c968acaa940031ae25 > secret-file
+java -jar agent.jar -jnlpUrl http://13.235.24.216:8080/computer/testing1/slave-agent.jnlp -secret @secret-file -workDir "/root/jenkins"

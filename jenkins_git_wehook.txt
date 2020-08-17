@@ -1,0 +1,56 @@
+plugins to check:
+- delivery pipeline plugin
+- github branch source plugin
+
+
+manage jenkins and configure global security and set agent to random
+
+
+manage jenkins and configure system and edit URL
+
+
+go to manage node and add new node
+
+
+download jar file and move it server:
+
+[root@ip-172-31-4-69 ~]# mkdir jenkins
+[root@ip-172-31-4-69 ~]# cd jenkins/
+[root@ip-172-31-4-69 jenkins]# pwd
+/root/jenkins
+[root@ip-172-31-4-69 jenkins]# cd /home/ec2-user/
+[root@ip-172-31-4-69 ec2-user]# mv agent.jar /root/jenkins/
+[root@ip-172-31-4-69 ec2-user]# cd /root/jenkins/
+[root@ip-172-31-4-69 jenkins]# ls -ltr
+total 1488
+-rw-rw-r--. 1 ec2-user ec2-user 1521553 Aug 11 13:46 agent.jar
+[root@ip-172-31-4-69 jenkins]#
+[root@ip-172-31-4-69 jenkins]# chown root:root agent.jar
+
+yum install java-1.8.0-openjdk-devel git
+
+and execute command provided at dashboard
+
+
+go to git repo, go to settings and add git webhook
+http://15.207.116.177:8080/github-webhook/
+
+
+create new project and link with git repo
+
+https://github.com/shubhsharm/chroma.git/
+
+- githubproject
+- restrict to test
+- SCM git repo
+- build trigger GITscm polling
+
+go to jenkins and execute sh script from build step.
+
+
+once done. work on git repo and make commit
+
+
+
+
+
